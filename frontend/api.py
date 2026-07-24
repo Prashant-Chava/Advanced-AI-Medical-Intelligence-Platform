@@ -1,6 +1,6 @@
 import requests
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://advanced-ai-medical-intelligence-platform-pdd0.onrender.com"
 
 def predict(image_file, patient):
     """
