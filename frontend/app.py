@@ -17,9 +17,7 @@ from utils import (
     download_report,
 )
 
-# ======================================================
 # Page Configuration
-# ======================================================
 
 st.set_page_config(
     page_title="AI Medical Image Analysis",
@@ -240,15 +238,10 @@ for documentation and future reference.
         FOOTER_HTML,
         unsafe_allow_html=True,
     )
-# ======================================================
+
 # Analysis Page
-# ======================================================
 
 def show_analysis():
-
-    # --------------------------------------------------
-    # Navigation
-    # --------------------------------------------------
 
     col1, col2 = st.columns([1, 5])
 
@@ -273,9 +266,7 @@ medical analysis report.
 
     st.divider()
 
-    # --------------------------------------------------
-    # Upload & Patient Information
-    # --------------------------------------------------
+# Upload & Patient Information
 
     left, right = st.columns([1, 1], gap="large")
 
@@ -343,18 +334,12 @@ medical analysis report.
     st.write("")
     st.write("")
 
-    # --------------------------------------------------
-    # Analyze Button
-    # --------------------------------------------------
-
     analyze = st.button(
         "🔍 Analyze Scan",
         width="stretch",
     )
 
-    # --------------------------------------------------
-    # Validation & Prediction
-    # --------------------------------------------------
+# Validation & Prediction
 
     if analyze:
 
@@ -418,9 +403,7 @@ medical analysis report.
 
         progress.empty()
 
-    # --------------------------------------------------
-    # Results
-    # --------------------------------------------------
+# Results Section
 
     if st.session_state.result is None:
         return
